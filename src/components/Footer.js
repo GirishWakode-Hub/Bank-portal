@@ -48,8 +48,8 @@ const Footer = () => {
             <h3>Contact Us</h3>
             <ul>
               <li><i className="fas fa-envelope"></i> info@vsfinance.com</li>
-              <li><i className="fas fa-phone"></i> +1 (555) 123-4567</li>
-              <li><i className="fas fa-map-marker-alt"></i> Financial District, New York, NY</li>
+              <li><i className="fas fa-phone"></i> +91-9373831640</li>
+              <li><i className="fas fa-map-marker-alt"></i> Akola, Maharashtra, India</li>
             </ul>
           </div>
         </div>

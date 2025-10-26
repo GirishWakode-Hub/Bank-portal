@@ -202,7 +202,7 @@ const ClientLogin = () => {
                 </p>
                 <p>
                   New to VS Finance?{' '}
-                  <Link to="/register">Open an Account</Link>
+                  <Link to="/open-account">Open an Account</Link>
                 </p>
               </div>
             </div>
