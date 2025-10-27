@@ -396,7 +396,7 @@ footer {
 }
 /* Finance Types Page Styles */
 .finance-types-page {
-  padding-top: 80px;
+  padding-top: 0;
 }
 
 .page-hero {
@@ -596,7 +596,7 @@ footer {
 }
 /* Client Login Page Styles */
 .client-login-page {
-  padding-top: 80px;
+  padding-top: 0;
 }
 
 .login-container {
@@ -1004,7 +1004,7 @@ footer {
   }
 }
 .open-account-page {
-  padding-top: 80px;
+  padding-top: 0;
 }
 .process-steps-indicator {
   display: flex;
@@ -1413,7 +1413,7 @@ footer {
 }
 /* Enhanced Contact Page Styles */
 .contact-page {
-  padding-top: 80px;
+  padding-top: 0;
 }
 
 /* Hero Stats */
@@ -1692,44 +1692,269 @@ footer {
   flex-wrap: wrap;
   margin-top: 30px;
 }
+/* Header Mobile Styles */
+.header-container {
+  position: relative;
+}
 
-/* Responsive Design */
-@media (max-width: 768px) {
-  .hero-stats {
-    gap: 20px;
+/* Hamburger Icon */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 21px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 1001;
+}
+
+.hamburger span {
+  display: block;
+  height: 3px;
+  width: 100%;
+  background: var(--primary-blue);
+  border-radius: 3px;
+  transition: all 0.3s ease;
+  transform-origin: center;
+}
+
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translate(6px, 6px);
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
+}
+
+/* Header Actions for Desktop */
+.header-actions {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.cta-button.secondary {
+  background: var(--accent-gold);
+  color: var(--white);
+}
+
+.cta-button.secondary:hover {
+  background: #b8941f;
+}
+
+/* Mobile Navigation */
+.nav-menu {
+  display: flex;
+}
+
+.nav-menu ul {
+  display: flex;
+  list-style: none;
+}
+
+.nav-menu li {
+  margin-left: 25px;
+}
+
+.nav-menu li.mobile-login,
+.nav-menu li.mobile-open-account {
+  display: none;
+}
+
+.nav-menu a {
+  text-decoration: none;
+  color: var(--dark-gray);
+  font-weight: 500;
+  transition: color 0.3s;
+  display: flex;
+  align-items: center;
+}
+
+.nav-menu a i {
+  margin-right: 5px;
+}
+
+.nav-menu a:hover {
+  color: var(--secondary-blue);
+}
+
+.nav-menu a.active {
+  color: var(--secondary-blue);
+  font-weight: 600;
+  position: relative;
+}
+
+.nav-menu a.active::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: var(--secondary-blue);
+}
+
+/* Mobile Overlay */
+.mobile-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 998;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.mobile-overlay.active {
+  display: block;
+  opacity: 1;
+}
+
+/* Mobile Responsive Styles */
+@media (max-width: 968px) {
+  .header-actions {
+    display: none;
   }
-  
-  .hero-stats .stat strong {
-    font-size: 2rem;
+
+  .hamburger {
+    display: flex;
   }
-  
-  .contact-methods-grid {
-    grid-template-columns: 1fr;
-  }
-  
-  .form-row {
-    grid-template-columns: 1fr;
-  }
-  
-  .consultation-form {
-    padding: 30px 20px;
-  }
-  
-  .faq-grid {
-    grid-template-columns: 1fr;
-  }
-  
-  .assistance-buttons {
+
+  .nav-menu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 300px;
+    height: 100vh;
+    background: var(--white);
+    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+    transition: right 0.3s ease;
+    z-index: 1000;
+    display: flex;
     flex-direction: column;
-    align-items: center;
+    padding: 80px 30px 30px;
   }
-  
-  .success-actions {
+
+  .nav-menu.active {
+    right: 0;
+  }
+
+  .nav-menu ul {
     flex-direction: column;
-    align-items: center;
+    width: 100%;
+  }
+
+  .nav-menu li {
+    margin: 0;
+    width: 100%;
+  }
+
+  .nav-menu li a {
+    padding: 15px 0;
+    border-bottom: 1px solid var(--light-gray);
+    width: 100%;
+    font-size: 1.1rem;
+  }
+
+  .nav-menu li:last-child a {
+    border-bottom: none;
+  }
+
+  .nav-menu a.active::after {
+    display: none;
+  }
+
+  .nav-menu a.active {
+    color: var(--primary-blue);
+    background: rgba(0, 51, 102, 0.05);
+    padding-left: 15px;
+    margin-left: -15px;
+    border-radius: 6px;
+  }
+
+  /* Show mobile-only buttons */
+  .nav-menu li.mobile-login,
+  .nav-menu li.mobile-open-account {
+    display: block;
+    margin-top: 20px;
+  }
+
+  .nav-menu li.mobile-login a,
+  .nav-menu li.mobile-open-account a {
+    border: none;
+    justify-content: center;
+    text-align: center;
+    border-radius: 6px;
+    margin: 5px 0;
+  }
+
+  .cta-button.mobile {
+    width: 100%;
+    justify-content: center;
   }
 }
 
+@media (max-width: 480px) {
+  .nav-menu {
+    width: 100%;
+    right: -100%;
+  }
+
+  .nav-menu.active {
+    right: 0;
+  }
+
+  .logo {
+    font-size: 20px;
+  }
+
+  .header-container {
+    padding: 10px 0;
+  }
+}
+
+/* Additional Mobile Improvements */
+@media (max-width: 768px) {
+  header {
+    position: sticky;
+    top: 0;
+    z-index: 999;
+  }
+
+  .nav-menu a {
+    font-size: 1rem;
+  }
+
+  .nav-menu li.mobile-login,
+  .nav-menu li.mobile-open-account {
+    margin-top: 15px;
+  }
+}
+
+/* Smooth transitions for all interactive elements */
+.nav-menu a,
+.cta-button,
+.hamburger {
+  transition: all 0.3s ease;
+}
+
+/* Focus styles for accessibility */
+.hamburger:focus,
+.nav-menu a:focus,
+.cta-button:focus {
+  outline: 2px solid var(--secondary-blue);
+  outline-offset: 2px;
+}
 @media (max-width: 768px) {
   .login-form-container {
     padding: 30px 20px;
