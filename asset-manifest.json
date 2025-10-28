@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/Bank-portal/static/css/main.ce54cc2d.css",
+    "main.js": "/Bank-portal/static/js/main.293c54e9.js",
+    "static/js/453.3553bda5.chunk.js": "/Bank-portal/static/js/453.3553bda5.chunk.js",
+    "static/media/fa-solid-900.woff2": "/Bank-portal/static/media/fa-solid-900.8ae0d37556ff1e685de2.woff2",
+    "static/media/fa-brands-400.woff2": "/Bank-portal/static/media/fa-brands-400.1c5c7716b05754cb4eab.woff2",
+    "static/media/fa-regular-400.woff2": "/Bank-portal/static/media/fa-regular-400.6f05ca9ab7b5345dbc07.woff2",
+    "static/media/fa-v4compatibility.woff2": "/Bank-portal/static/media/fa-v4compatibility.e4340c52a50e727c6afa.woff2",
+    "index.html": "/Bank-portal/index.html",
+    "main.ce54cc2d.css.map": "/Bank-portal/static/css/main.ce54cc2d.css.map",
+    "main.293c54e9.js.map": "/Bank-portal/static/js/main.293c54e9.js.map",
+    "453.3553bda5.chunk.js.map": "/Bank-portal/static/js/453.3553bda5.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ce54cc2d.css",
+    "static/js/main.293c54e9.js"
+  ]
+}
